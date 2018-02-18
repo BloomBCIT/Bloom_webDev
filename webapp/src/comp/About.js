@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Map from './maps/Map';
 
 class About extends Component {
     constructor(props){
@@ -108,6 +109,16 @@ class About extends Component {
                     <br/>
                     Our products bring together the finest materials and stunning design to create something very special. We believe in quality, care, and creating unique products that everyone can enjoy. Colorful, creative, and inspired by what we see everyday, each product represents what we love about the world we live in. We hope they’ll inspire you too.
                 </div>
+            </div>
+            <div>
+                <h4>Our Location</h4>
+                <Map
+                    isMarkerShown
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                    loadingElement={<div style={{ height: `100%` }} />}
+                    containerElement={<div style={{ height: `400px`, width: '50%', margin: 'auto' }} />}
+                    mapElement={<div style={{ height: `100%` }} />}
+                />
             </div>
         </div>
         
